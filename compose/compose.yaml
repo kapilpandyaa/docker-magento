@@ -51,7 +51,7 @@ services:
   ## If you wish to use MySQL, comment out the mariadb db image above and
   ## uncomment this block.
   db:
-   image: mysql:8.4
+   image: mysql:8.0
    command:
      --max_allowed_packet=64M
      --log_bin_trust_function_creators=1
