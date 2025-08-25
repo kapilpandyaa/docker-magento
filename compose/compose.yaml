@@ -127,6 +127,15 @@ services:
     image: sj26/mailcatcher:v0.10.0
     ports:
       - "1080:1080"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: magento
 
   ## Cloudflare tunnel support, uncomment to enable
   #tunnel:
